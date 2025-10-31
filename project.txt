@@ -1,0 +1,41 @@
+Users 
+    - ROUTES : signup , signin , get-purchases , post-purchases 
+    - SCHEMA : 
+        - _id : ObjectId 
+        - email : string 
+        - password  : string 
+        - firstname : string , 
+        - lastname : string , 
+
+Admin 
+    - ROUTES : signup , signin , post-course , put/update-course , get-all-courses 
+    - SCHEMA : 
+        - _id : ObjectId
+        - email : String 
+        - password : String 
+        - firstName : String 
+        - lastName : String 
+
+Courses 
+    - ROUTES : get-Courses
+    - SCHEMA : 
+        - _id : ObjectId
+        - title : String , 
+        - description : String , 
+        - price : number , 
+        - imageURL : string , 
+        - creatorId : ObjectId , 
+
+Purchases 
+    - ROUTES : 
+    - _id : ObjectId
+    - courseId : ObjectId
+
+CourseContent 
+    - later 
+
+
+- password hashing -> done 
+- zod validation
+- database admin , user -> done 
+- database course , purchases 
