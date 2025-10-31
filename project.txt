@@ -39,3 +39,33 @@ CourseContent
 - zod validation
 - database admin , user -> done 
 - database course , purchases 
+
+index.js 
+- middlewares : cors , express.json() 
+- routers : user , admin , course 
+- main function to connect the mongodb database and listen to the port 
+
+db.js 
+- import mongoose 
+- create the schema for the tables -> user , admin , course , payments 
+- add the model of the schemas 
+- export the model variable 
+
+middlewares/usermiddleware.js 
+- take in the token from the request body 
+- decode the token with JWT_USER_PASSWORD 
+- take the decodedtoken.id that is the req.userId 
+- next() -> user.js routes 
+
+middlewares/adminmiddleware.js 
+- take in the token from the request body 
+- decode the token with JWT_ADMIN_PASSWORD 
+- take the decodedtoken.id that is the req.adminId 
+- next() -> admin.js routes 
+
+routes/user.js : 
+- import JWT 
+- user routes added :- 
+- signup -> create a user and hash the password and  add to db 
+- signin -> log in the user search the user in the db and 
+- purchases -> 

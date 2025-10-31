@@ -90,7 +90,7 @@ adminrouter.post('/course',adminMiddleware, async (req,res) => {
 adminrouter.put('/course',adminMiddleware, async (req,res) => { 
     const adminId = req.id
 
-    const { title , description , price , imageUrl } = req.body ; 
+    const { title , description , price , imageUrl , courseId } = req.body ; 
 
     try { 
         const updateCourse = await courseModel.updateOne({
